@@ -27,38 +27,6 @@
 
 ### Your subdomain will be: `mysubdomain.netref.link`
 
-## For Administrators
-
-### One-Time Setup
-
-1. Get Cloudflare API Token (Zone DNS Edit permission)
-2. Add GitHub Secrets:
-   - `CLOUDFLARE_API_TOKEN`
-   - `CLOUDFLARE_ZONE_ID`
-
-### Reviewing Requests
-
-1. PR arrives with subdomain request
-2. Check validation passed (automatic)
-3. Review for appropriate use
-4. Merge PR
-5. DNS updates automatically!
-
-### Manual Commands
-
-```bash
-# Validate all requests
-python scripts/validate.py
-
-# Update DNS (dry-run)
-export CLOUDFLARE_API_TOKEN="your-token"
-export CLOUDFLARE_ZONE_ID="your-zone-id"
-python scripts/update_cloudflare.py --dry-run
-
-# Update DNS (live)
-python scripts/update_cloudflare.py
-```
-
 ## Workflow Summary
 
 ```
@@ -93,7 +61,6 @@ scripts/
 
 README.md                   # Project overview
 CONTRIBUTING.md             # User guide
-SETUP.md                    # Admin setup guide
 ```
 
 ## Supported DNS Record Types
@@ -116,6 +83,5 @@ SETUP.md                    # Admin setup guide
 ## Getting Help
 
 - 📖 Read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed instructions
-- 🔧 Read [SETUP.md](SETUP.md) for admin configuration
 - 💬 Open an issue for questions
 - 🌟 Star the repo to show support!

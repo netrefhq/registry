@@ -15,7 +15,6 @@ Want a free subdomain? Here's how:
 📚 **Documentation:**
 - [Quick Reference Guide](QUICKSTART.md) - Fast overview
 - [Contributing Guide](CONTRIBUTING.md) - Detailed instructions
-- [Admin Setup](SETUP.md) - For administrators
 
 ## 📝 Example Subdomain Request
 
@@ -53,32 +52,6 @@ This creates `mysite.netref.link` pointing to your site!
 
 - [Contributing Guide](CONTRIBUTING.md) - How to request a subdomain
 - [Example Request](domains/example.yaml) - Template for subdomain requests
-
-## 🛠️ For Administrators
-
-### Required Secrets
-
-Configure these secrets in your repository settings:
-
-- `CLOUDFLARE_API_TOKEN`: API token with DNS edit permissions
-- `CLOUDFLARE_ZONE_ID`: Zone ID for netref.link domain
-
-### Manual Operations
-
-Run scripts locally (for testing):
-
-```bash
-# Validate all subdomain requests
-python scripts/validate.py
-
-# Update Cloudflare DNS (dry run)
-python scripts/update_cloudflare.py --dry-run
-
-# Update Cloudflare DNS (live)
-export CLOUDFLARE_API_TOKEN="your-token"
-export CLOUDFLARE_ZONE_ID="your-zone-id"
-python scripts/update_cloudflare.py
-```
 
 ## 📜 License
 

@@ -14,7 +14,7 @@ email: john.doe@example.com
 # Required: Description of how this subdomain will be used
 description: Personal website and blog
 
-# Required: DNS record type (A, AAAA, CNAME, TXT, MX)
+# Required: DNS record type (A, AAAA, CNAME, TXT)
 record_type: CNAME
 
 # Required: DNS record value (IP address for A/AAAA, domain for CNAME, etc.)

@@ -23,7 +23,7 @@ def validate_subdomain(subdomain):
 
 def validate_record_type(record_type):
     """Validate DNS record type"""
-    valid_types = ['A', 'AAAA', 'CNAME', 'TXT', 'MX']
+    valid_types = ['A', 'AAAA', 'CNAME', 'TXT']
     return record_type in valid_types
 
 def validate_yaml_file(filepath):
@@ -63,7 +63,7 @@ def validate_yaml_file(filepath):
     
     # Validate record type
     if 'record_type' in data and not validate_record_type(data['record_type']):
-        errors.append(f"Invalid record_type: {data['record_type']}. Must be one of: A, AAAA, CNAME, TXT, MX")
+        errors.append(f"Invalid record_type: {data['record_type']}. Must be one of: A, AAAA, CNAME, TXT")
     
     # Validate TTL if present
     if 'ttl' in data:

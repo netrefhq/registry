@@ -28,7 +28,7 @@ email: your.email@example.com
 # Required: Description of how this subdomain will be used
 description: My personal website
 
-# Required: DNS record type (A, AAAA, CNAME, TXT, MX)
+# Required: DNS record type (A, AAAA, CNAME, TXT)
 record_type: CNAME
 
 # Required: DNS record value (IP address for A/AAAA, domain for CNAME, etc.)
@@ -77,7 +77,6 @@ Once your pull request is approved and merged:
 - **AAAA**: IPv6 address (e.g., `2001:db8::1`)
 - **CNAME**: Canonical name pointing to another domain (e.g., `example.github.io`)
 - **TXT**: Text record (e.g., for verification)
-- **MX**: Mail exchange record (e.g., `10 mail.example.com`)
 
 ### Usage Requirements
 

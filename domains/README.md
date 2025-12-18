@@ -26,7 +26,7 @@ subdomain: yourname        # Required: subdomain name (lowercase, alphanumeric, 
 owner: Your Name           # Required: owner name or organization
 email: you@example.com     # Required: contact email
 description: Purpose       # Required: description of use
-record_type: CNAME         # Required: A, AAAA, CNAME, TXT, or MX
+record_type: CNAME         # Required: A, AAAA, CNAME, or TXT
 record_value: target.com   # Required: DNS target
 ttl: 3600                  # Optional: TTL in seconds (default: 3600)
 proxied: false             # Optional: Cloudflare proxy (default: false)

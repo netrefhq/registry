@@ -102,7 +102,6 @@ SETUP.md                    # Admin setup guide
 - **AAAA**: IPv6 address
 - **CNAME**: Point to another domain
 - **TXT**: Text records
-- **MX**: Mail exchange records
 
 ## Common Use Cases
 

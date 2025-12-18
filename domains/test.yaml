@@ -1,0 +1,9 @@
+# Test subdomain request
+subdomain: test
+owner: Test User
+email: test@example.com
+description: Test subdomain for validation
+record_type: A
+record_value: 192.0.2.1
+ttl: 3600
+proxied: false

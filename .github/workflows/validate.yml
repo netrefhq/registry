@@ -1,0 +1,71 @@
+name: Validate Subdomain Requests
+
+on:
+  pull_request:
+    paths:
+      - 'domains/*.yaml'
+      - 'domains/*.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+      
+      - name: Validate YAML files
+        run: |
+          python scripts/validate.py
+      
+      - name: Check for modified files only in domains/
+        run: |
+          # Get list of changed files
+          git fetch origin ${{ github.base_ref }}
+          changed_files=$(git diff --name-only origin/${{ github.base_ref }}...HEAD)
+          
+          echo "Changed files:"
+          echo "$changed_files"
+          
+          # Check if any non-YAML files in domains/ or files outside domains/ were modified
+          # Allow YAML files in domains/ directory
+          invalid_files=$(echo "$changed_files" | grep -v '^domains/.*\.ya*ml$' || true)
+          
+          if [ -n "$invalid_files" ]; then
+            echo "⚠️ Warning: This PR modifies files outside the domains/ directory:"
+            echo "$invalid_files"
+            echo ""
+            echo "For subdomain requests, please only add or modify YAML files in the domains/ directory."
+            echo "If you're making other changes (documentation, scripts, etc.), this warning can be ignored by admins."
+          fi
+          
+          # Count YAML files changed
+          yaml_files=$(echo "$changed_files" | grep '^domains/.*\.ya*ml$' || true)
+          yaml_count=$(echo "$yaml_files" | grep -c . || echo "0")
+          
+          echo ""
+          echo "📊 Summary: $yaml_count YAML file(s) in domains/ directory"
+      
+      - name: Comment on PR
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Subdomain request validation passed! An admin will review and approve your request.'
+            })

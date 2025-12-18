@@ -1,0 +1,27 @@
+# Example subdomain request
+# Copy this file to the domains/ directory with your desired subdomain name
+# File name should be: <subdomain>.yaml (e.g., example.yaml for example.netref.link)
+
+# Required: The subdomain you want to register
+subdomain: example
+
+# Required: Your name or organization name
+owner: John Doe
+
+# Required: Contact email for administrative purposes
+email: john.doe@example.com
+
+# Required: Description of how this subdomain will be used
+description: Personal website and blog
+
+# Required: DNS record type (A, AAAA, CNAME, TXT)
+record_type: CNAME
+
+# Required: DNS record value (IP address for A/AAAA, domain for CNAME, etc.)
+record_value: john-doe.github.io
+
+# Optional: TTL (Time To Live) in seconds, defaults to 3600 (1 hour)
+ttl: 3600
+
+# Optional: Proxy through Cloudflare (true/false), defaults to false
+proxied: false

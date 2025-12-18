@@ -102,7 +102,8 @@ def check_duplicate_subdomains(domains_dir):
                         duplicates.append(f"Duplicate subdomain '{subdomain}' in {filepath.name} and {subdomains[subdomain]}")
                     else:
                         subdomains[subdomain] = filepath.name
-        except:
+        except Exception:
+            # Skip files that can't be read or parsed
             pass
     
     return duplicates

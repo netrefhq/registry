@@ -12,6 +12,9 @@ jobs:
     # Only run if PR was merged (approved and merged)
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     
     steps:
       - name: Checkout code

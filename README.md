@@ -40,7 +40,7 @@ This creates `mysite.netref.link` pointing to your site!
 - **Automated Validation**: GitHub Actions automatically validate your request
 - **Instant Updates**: DNS updates happen automatically upon approval
 - **Transparent**: All requests and approvals are public via Git history
-- **Flexible**: Support for A, AAAA, CNAME, TXT, and MX records
+- **Flexible**: Support for A, AAAA, CNAME, and TXT records
 
 ## 🔧 How It Works
 

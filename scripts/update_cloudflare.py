@@ -59,7 +59,7 @@ def create_dns_record(api_token, zone_id, subdomain, record_type, record_value, 
     url = f'https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records'
     response = requests.post(url, headers=headers, json=data)
     
-    if response.status_code not in [200, 201]:
+    if response.status_code not in (200, 201):
         raise Exception(f"Failed to create DNS record for {full_domain}: {response.text}")
     
     return response.json().get('result')

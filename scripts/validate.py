@@ -18,7 +18,11 @@ def validate_email(email):
 def validate_subdomain(subdomain):
     """Validate subdomain name"""
     # Must be alphanumeric with hyphens, no starting/ending hyphen
-    pattern = r'^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$'
+    # Length: 1-63 characters
+    # Pattern: start with alphanumeric, end with alphanumeric, middle can have hyphens
+    if len(subdomain) < 1 or len(subdomain) > 63:
+        return False
+    pattern = r'^[a-z0-9]([a-z0-9-]*[a-z0-9])?$'
     return re.match(pattern, subdomain) is not None
 
 def validate_record_type(record_type):

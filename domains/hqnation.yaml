@@ -1,0 +1,8 @@
+subdomain: hqnation
+owner: Doctor Prime
+email: drthesmos@vivaldi.net
+description: Organization webiste
+record_type: CNAME
+record_value: hqnation.github.io
+ttl: 3600
+proxied: false

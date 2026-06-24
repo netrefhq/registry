@@ -1,0 +1,8 @@
+subdomain: serp
+owner: Matthew Devitt
+email: sagespray@icloud.com
+description: RP MUSH / Minecraft RP server
+record_type: A
+record_value: 68.170.229.134
+ttl: 3600
+proxied: false

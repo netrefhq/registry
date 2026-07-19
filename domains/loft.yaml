@@ -1,0 +1,3 @@
+subdomain: "loft"
+type: "CNAME"
+value: "loft.github.io"

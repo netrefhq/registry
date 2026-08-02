@@ -1,3 +1,8 @@
 subdomain: "loft"
-type: "CNAME"
-value: "madridloft.netlify.app"
+owner: "Guillermo Lopez"
+email: "tu-correo-real@ejemplo.com"
+description: "Experimental art residence and portfolio project in Madrid"
+record_type: "CNAME"
+record_value: "madridloft.netlify.app"
+ttl: 3600
+proxied: false

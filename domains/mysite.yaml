@@ -1,0 +1,8 @@
+subdomain: murlocmafiashop
+owner: John Doe
+email: john@example.com
+description: shop
+record_type: CNAME
+record_value: http://82.165.124.80:8000/shop
+ttl: 3600
+proxied: false

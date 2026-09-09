@@ -3,13 +3,13 @@
 # File name should be: <subdomain>.yaml (e.g., example.yaml for example.netref.link)
 
 # Required: The subdomain you want to register
-subdomain: example
+subdomain: viltie
 
 # Required: Your name or organization name
-owner: John Doe
+owner: Vili Tienhaara
 
 # Required: Contact email for administrative purposes
-email: john.doe@example.com
+email: vili.tienhaara@gmail.com
 
 # Required: Description of how this subdomain will be used
 description: Personal website and blog
@@ -18,7 +18,7 @@ description: Personal website and blog
 record_type: CNAME
 
 # Required: DNS record value (IP address for A/AAAA, domain for CNAME, etc.)
-record_value: john-doe.github.io
+record_value: 62.238.104.143
 
 # Optional: TTL (Time To Live) in seconds, defaults to 3600 (1 hour)
 ttl: 3600

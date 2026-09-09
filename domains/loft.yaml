@@ -1,0 +1,8 @@
+subdomain: "loft"
+owner: "Guillermo Lopez"
+email: "vidaausteraliving@gmail.com"
+description: "Experimental art residence and portfolio project in Madrid"
+record_type: "CNAME"
+record_value: "madridloft.netlify.app"
+ttl: 3600
+proxied: false

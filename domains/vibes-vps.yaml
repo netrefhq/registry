@@ -1,0 +1,8 @@
+subdomain: "vibes-vps"
+owner: "Brandon Pikirai"
+email: "brendonpikirai@gmail.com"
+description: "Personal VPS tunnel endpoint"
+record_type: "CNAME"
+record_value: "vibes-vps.vybz08.workers.dev"
+ttl: 3600
+proxied: false
